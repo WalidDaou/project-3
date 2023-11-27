@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .one {
+
+            position: fixed;
+            z-index: 1;
+
+            width: 100vw;
+
+
+        }
+
+
+
+
+        .left {
+            margin-left: 0px;
+            padding: 20px;
+        }
+
+
+        .header img {
+            height: 20px;
+        }
+
+        #left {
+            padding-right: 10px;
+            color: black;
+        }
+
+        #right {
+            padding-right: 20px;
+            margin-right: 0px;
+        }
+
+
+
+        .images {
+
+            position: relative;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            height: 400px;
+            width: 100vw;
+            overflow: hidden;
+            padding-top: 50px;
+            position: relative;
+            background-color: rgb(161, 137, 185);
+
+        }
+
+
+        .images .stuff {
+            display: flex;
+
+            flex-direction: column;
+            position: absolute;
+            left: 20px;
+
+            bottom: 30px;
+
+        }
+
+        .p {
+            font-size: 20px;
+            color: rgb(187, 30, 30);
+        }
+
+        .a {
+            margin-top: 5px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .left-btn {
+            margin-left: 80px;
+            font-size: 20px;
+            border: 2px solid red;
+            height: 40px;
+            width: 60px;
+        }
+
+        .right-btn {
+            margin-right: 80px;
+            font-size: 20px;
+            border: 2px solid red;
+            height: 40px;
+            width: 60px;
+        }
+
+        .buttom {
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .aa {
+            display: flex;
+            justify-content: center;
+        }
+        .header_two img {
+            width: 20px;
+            background-color: rgb(196, 192, 192);
+
+        }
+
+        .header_two {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            background-color: rgb(196, 192, 192);
+        }
+
+        .card {
+
+            display: flex;
+            flex-direction: column;
+            height: 300px;
+
+            background-color: wheat;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 70px;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(205, 167, 241);
+            padding-top: 30px;
+            padding-bottom: 40px;
+        }
+
+        #im {
+
+            display: flex;
+            flex-direction: column;
+
+            height: 300px;
+            width: 240px;
+            overflow: hidden;
+        }
+
+        .under_card {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+        }
+
+        .text {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .buttom_z {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            padding: 30px
+        }
+
+        .zz {
+            display: flex;
+            margin-bottom: 20px;
+            font-size: x-large;
+        }
+
+        .ttt {
+            display: flex;
+            justify-content: center;
+        }
+
+        .under_card img {
+            width: 20px;
+        }
+
+
+        @media only screen and (max-width: 580px) {
+            .card {
+                width: 150px;
+                overflow: hidden;
+                margin: 5px;
+            }
+
+            .cards {
+                gap: 10px
+            }
+
+            .header {
+                margin: 0%;
+            }
+
+            .images {
+                min-width: 200px;
+            }
+
+            .right-btn {
+                margin-right: 15px;
+            }
+
+            .left-btn {
+                margin-left: 15px;
+            }
+
+            .buttom_z {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .text {
+                size: 50%;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        .header {}
+
+        .like-button {
+            display: inline-flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .like-button.clicked {
+            color: #ff6347;
+            /* Change color when clicked */
+        }
+
+        .like-button:hover {
+            color: #ff0000;
+            /* Change color on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one">
+        <!-- justify-evenly flex   bg-red-600 items-centert ext-center w-screen items-center justify-evenly -->
+        <div class="flex" aria-colspan="fixed"  class="bg-red-15">
+            <div class="left">
+                <a id="left" href="#">shop</a>
+                <a id="left" href="#">about</a>
+            </div>
+            <div class="logo">
+                <img src="image\lock.png" alt="">
+
+            </div>
+            <div class="right">
+                <a href="#"><img id="right" src="image\pp.png" alt=""> </a>
+                <a href="#"><img id="right" src="image\cart.webp" alt=""></a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="images">
+        <div class="aa">
+            <img src="image\1.jpg" alt="">
+        </div>
+        <div class="stuff">
+            <p class="p">stuff stuff the absolute stuff </p>
+            <a class="a" href="#">view more</a>
+        </div>
+        <div class="buttom">
+            <button class="left-btn" onclick="prevImage()">
+
+                -</button>
+            <button class="right-btn" onclick="nextImage()">+</button>
+        </div>
+    </div>
+    <div class="header_two">
+        <p class="right_two">Store</p>
+        <p class="left_two">
+            <img src="image\rrr.png" alt="">
+
+        </p>
+    </div>
+    <div class="cards">
+
+        <div class="card">
+            <div id="im">
+                <img src="image\w.jpg" alt="">
+            </div>
+            <div class="under_card">
+                <p>product Name</p>
+
+                <div class="like-button" >
+                    <p><img src="image\heart.png" alt="">
+
+                    </p>
+                </div>
+            </div>
+            <span>$9.99</span>
+        </div>
+
+        <div class="card">
+            <div id="im">
+                <img src="image\x.jpg" alt="">
+            </div>
+            <div class="under_card">
+                <p>product Name</p>
+                <div class="like-button">
+                    <p><img src="image\heart.png" alt="">
+                    </p>
+                </div>
+            </div>
+            <span>$9.99</span>
+        </div>
+        <div class="card">
+            <div id="im">
+                <img src="image\z.jpg" alt="">
+            </div>
+            <div class="under_card">
+                <p>product Name</p>
+                <div class="like-button">
+                    <p><img src="image\heart.png" alt="">
+                    </p>
+                </div>
+            </div>
+            <span>$9.99</span>
+        </div>
+        <div class="card">
+            <div id="im">
+                <img src="image\r.jpg" alt="">
+            </div>
+            <div class="under_card">
+                <p>product Name</p>
+                <div class="like-button">
+                    <p><img src="image\heart.png" alt="">
+                    </p>
+                </div>
+            </div>
+            <span>$9.99</span>
+        </div>
+        <div class="card">
+            <div id="im">
+                <img src="image\k.jpg" alt="">
+            </div>
+            <div class="under_card">
+                <p>product Name</p>
+                <div class="like-button">
+                    <p><img src="image\heart.png" alt="">
+                    </p>
+                </div>
+            </div>
+            <span>$9.99</span>
+        </div>
+        <div class="card">
+            <div id="im">
+                <img src="image\he.jpg" alt="">
+            </div>
+            <div class="under_card">
+                <p>product Name</p>
+                <div class="like-button">
+                    <p><img src="image\heart.png" alt="">
+                    </p>
+                </div>
+            </div>
+            <span>$9.99</span>
+        </div>
+        <div class="card">
+            <div id="im">
+                <img src="image\d.webp" alt="">
+            </div>
+            <div class="under_card">
+                <p>product Name</p>
+                <div class="like-button">
+                    <p><img src="image\heart.png" alt="">
+                    </p>
+                </div>
+            </div>
+            <span>$9.99</span>
+        </div>
+        <div class="card">
+            <div id="im">
+                <img src="image\3.webp" alt="">
+            </div>
+            <div class="under_card">
+                <p>product Name</p>
+                <div class="like-button">
+                    <p><img src="image\heart.png" alt="">
+                    </p>
+                </div>
+            </div>
+            <span>$9.99</span>
+        </div>
+
+
+
+
+
+
+
+
+    </div>
+    <div class="text">
+        <h2>about</h2>
+        <p>wwwwwwwwwww wwwwwwwww wwwwwwwwwwwwwwwww wwwwwwwwww wwwwwwwwwwwwww wwwwwwwwwwwwwwwwww wwwwwwwwwwwwww
+            wwwwwwwwwwwwwwwwwwwwwwwww wwwwwwwwww wwwwwwwwwwwwwwwww
+            wwwwwwwwwwwwwwwwwwwwwwwwww
+            wwwwwww
+
+        </p>
+
+
+    </div>
+    <div class="buttom_z">
+        <div class="buttom_one">
+            <div class="zz">
+                <h3>About</h3>
+            </div>
+            <p class="yi">In the vast expanse of nothingness, where the void embraces <br> the absence of substance, a
+                silent symphony
+                of emptiness unfolds. <br> No vibrant hues paint the canvas of nonexistence, a0d the echoes of <br>
+                nonexistent
+                events resonate in the hollow corridors of nothing. <br> A void devoid of form, structure, or meaning,
+                where
+
+            </p>
+        </div>
+        <div class="buttom_two">
+            <div class="zz">
+                <h3>Social</h3>
+            </div>
+            <p class="yi">add social links</p>
+        </div>
+    </div>
+
+
+    <script>
+
+        let imageSources = [
+
+            "image/1.jpg",
+            "image/2.jpg",
+            "image/3.webp",
+            "image/4.webp"
+        ];
+
+        let imgIndex = 0;
+        updateUI();
+
+        function moveRight() {
+            //   move pointer one step to the right 
+            imgIndex = imgIndex + 1
+            // if(imgIndex>3){imgIndex=0} or fik 
+            if (imgIndex > 3) {
+                imgIndex = imageSources.length - 4
+            }
+            updateUI();
+
+        }
+        function moveLeft() {
+            imgIndex = imgIndex - 1
+            // if(imgIndex<0){imgIndex=3} or fik
+            if (imgIndex < 0) {
+                imgIndex = imageSources.length - 1
+            }
+            updateUI();
+        }
+
+        function updateUI() {
+            document.querySelector('.images img').src = imageSources[imgIndex]
+        }
+
+        let rightbtn = document.querySelector('.right-btn')
+        rightbtn.addEventListener('click', moveRight)
+
+        let leftbtn = document.querySelector('.left-btn')
+        leftbtn.addEventListener('click', moveLeft)
+
+
+
+
+
+        function changeColor(like-button) {
+            element.classList.toggle('clicked'); // Toggle the 'clicked' class
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // const image = document.querySelector('.aa');
+        // let currentimage = img.src = "images\orlf.webp"
+        // updateUI()
+
+        // function updateUI() {
+        //     image.innerHTML = currentimage
+        // }
+
+        // function add () {
+        //     currentimage = imageSources[0]
+        //     updateUI()
+        // }
+
+
+
+        // function updateUI() {
+        // image.innerHTML = `<img src="${imageSources[currentIndex]}" alt="">`;
+        // }
+
+        // function prevImage() {
+        //     currentIndex = (currentIndex - 1 + imageSources.length) % imageSources.length;
+        //     updateUI();
+        // }
+
+        // function nextImage() {
+        //     currentIndex = (currentIndex + 1) % imageSources.length;
+        //     updateUI();
+        // }
+        // updateUI();
+
+    </script>
+
+</html>
+
+
+
+
+
+
+
+
+</script>
+</body>
+
+</html>

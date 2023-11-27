@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0%;
+            padding: 0%;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            margin: 50px;
+            justify-content: center;
+            align-items: center;
+            height: 100ch;
+            width: 100vw;
+        }
+
+        .buttom {
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .stuff {
+            position: relative;
+            box-sizing: border-box;
+            display: flex;
+            border: 4px solid red;
+            flex-direction: column;
+            height: 400px;
+            width: 400px;
+        }
+
+        .left-btn {
+            margin: 20px;
+            font-size: 20px;
+            border: 2px solid red;
+            height: 40px;
+            width: 60px;
+        }
+
+        .right-btn {
+            margin: 20px;
+            font-size: 20px;
+            border: 2px solid red;
+            height: 40px;
+            width: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="stuff">
+        <div class="aa">
+            <img src="" alt="">
+
+        </div>
+        <div class="buttom">
+            <button class="left-btn" onclick="prevImage()">
+
+                -</button>
+            <button class="right-btn" onclick="nextImage()">+</button>
+        </div>
+    </div>
+</body>
+
+<script>
+
+let imageSources = [
+
+"image/1.jpg",
+"image/2.jpg",
+"image/3.webp",
+"image/4.webp"
+];
+
+    let imgIndex = 0;
+    updateUI();
+
+    function moveRight() {
+        //   move pointer one step to the right 
+        imgIndex = imgIndex + 1
+        // if(imgIndex>3){imgIndex=0} or fik 
+        if(imgIndex>3){
+            imgIndex = imageSources.length -4
+        }
+        updateUI();
+
+    }
+    function moveLeft() {
+        imgIndex = imgIndex - 1
+        // if(imgIndex<0){imgIndex=3} or fik
+        if(imgIndex<0){
+            imgIndex = imageSources.length -1
+        }
+        updateUI();
+    }
+
+    function updateUI() {
+        document.querySelector('.stuff img').src = imageSources[imgIndex]
+    }
+
+let rightbtn = document.querySelector('.right-btn')
+rightbtn.addEventListener('click',moveRight)
+
+let leftbtn = document.querySelector('.left-btn')
+leftbtn.addEventListener('click',moveLeft)
+
+
+
+    // const image = document.querySelector('.aa');
+    // let currentimage = img.src = "images\orlf.webp"
+    // updateUI()
+
+    // function updateUI() {
+    //     image.innerHTML = currentimage
+    // }
+
+    // function add () {
+    //     currentimage = imageSources[0]
+    //     updateUI()
+    // }
+
+    
+
+    // function updateUI() {
+    // image.innerHTML = `<img src="${imageSources[currentIndex]}" alt="">`;
+    // }
+
+    // function prevImage() {
+    //     currentIndex = (currentIndex - 1 + imageSources.length) % imageSources.length;
+    //     updateUI();
+    // }
+
+    // function nextImage() {
+    //     currentIndex = (currentIndex + 1) % imageSources.length;
+    //     updateUI();
+    // }
+    // updateUI();
+
+</script>
+</html>
+
