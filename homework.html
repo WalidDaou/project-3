@@ -2,9 +2,14 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Corner Store</title>
+
     <style>
         * {
 
@@ -117,6 +122,7 @@
             display: flex;
             justify-content: center;
         }
+
         .header_two img {
             width: 20px;
             background-color: rgb(196, 192, 192);
@@ -129,28 +135,9 @@
             padding: 15px;
             background-color: rgb(196, 192, 192);
         }
+</style>
 
-        .card {
-
-            display: flex;
-            flex-direction: column;
-            height: 300px;
-
-            background-color: wheat;
-        }
-
-        .cards {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 70px;
-            justify-content: center;
-            align-items: center;
-            background-color: rgb(205, 167, 241);
-            padding-top: 30px;
-            padding-bottom: 40px;
-        }
-
-        #im {
+   <style>     #im {
 
             display: flex;
             flex-direction: column;
@@ -236,7 +223,7 @@
             }
         }
 
-        .header {}
+
 
         .like-button {
             display: inline-flex;
@@ -249,9 +236,18 @@
             /* Change color when clicked */
         }
 
-        .like-button:hover {
+
+
+        .one img {
+            width: 20px;
+        }
+
+        .red {
             color: #ff0000;
-            /* Change color on hover */
+        }
+
+        .border-1 {
+            border: 2px solid black;
         }
     </style>
 </head>
@@ -259,7 +255,7 @@
 <body>
     <div class="one">
         <!-- justify-evenly flex   bg-red-600 items-centert ext-center w-screen items-center justify-evenly -->
-        <div class="flex" aria-colspan="fixed"  class="bg-red-15">
+        <div class="flex" aria-colspan="fixed" class="bg-red-15">
             <div class="left">
                 <a id="left" href="#">shop</a>
                 <a id="left" href="#">about</a>
@@ -291,26 +287,29 @@
             <button class="right-btn" onclick="nextImage()">+</button>
         </div>
     </div>
-    <div class="header_two">
+    <div class="header_two relative">
         <p class="right_two">Store</p>
-        <p class="left_two">
-            <img src="image\rrr.png" alt="">
-
-        </p>
+        <div>
+            <p>Store</p>
+            <i class="fas fa-search"></i>
+            <div class="hidden flex gap-2 absolute right-10 top-10 bg-white p-5 border-black border-1"
+                id="store-search">
+                <input class=" border-black border-2" type="text">
+                <p id="store-search-close">x</p>
+            </div>
+        </div>
     </div>
-    <div class="cards">
+    <div class="cards-grid" class="flex flex-wrap justify-center items-center gap-5">
 
-        <div class="card">
+        <!-- -- <div class="card">
             <div id="im">
                 <img src="image\w.jpg" alt="">
             </div>
             <div class="under_card">
                 <p>product Name</p>
 
-                <div class="like-button" >
-                    <p><img src="image\heart.png" alt="">
-
-                    </p>
+                <div class="like-button">
+                    <i class="far fa-heart"></i>
                 </div>
             </div>
             <span>$9.99</span>
@@ -323,8 +322,7 @@
             <div class="under_card">
                 <p>product Name</p>
                 <div class="like-button">
-                    <p><img src="image\heart.png" alt="">
-                    </p>
+                    <i class="far fa-heart"></i>
                 </div>
             </div>
             <span>$9.99</span>
@@ -334,49 +332,45 @@
                 <img src="image\z.jpg" alt="">
             </div>
             <div class="under_card">
-                <p>product Name</p>
+                <p>phone</p>
                 <div class="like-button">
-                    <p><img src="image\heart.png" alt="">
-                    </p>
+                    <i class="far fa-heart"></i>
                 </div>
             </div>
-            <span>$9.99</span>
+            <span>$199.99</span>
         </div>
         <div class="card">
             <div id="im">
                 <img src="image\r.jpg" alt="">
             </div>
             <div class="under_card">
-                <p>product Name</p>
+                <p>t-shirt</p>
                 <div class="like-button">
-                    <p><img src="image\heart.png" alt="">
-                    </p>
+                    <i class="far fa-heart"></i>
                 </div>
             </div>
-            <span>$9.99</span>
+            <span>$29.99</span>
         </div>
         <div class="card">
             <div id="im">
                 <img src="image\k.jpg" alt="">
             </div>
             <div class="under_card">
-                <p>product Name</p>
+                <p>car</p>
                 <div class="like-button">
-                    <p><img src="image\heart.png" alt="">
-                    </p>
+                    <i class="far fa-heart"></i>
                 </div>
             </div>
-            <span>$9.99</span>
+            <span>$999.99</span>
         </div>
         <div class="card">
             <div id="im">
                 <img src="image\he.jpg" alt="">
             </div>
             <div class="under_card">
-                <p>product Name</p>
+                <p>pen</p>
                 <div class="like-button">
-                    <p><img src="image\heart.png" alt="">
-                    </p>
+                    <i class="far fa-heart"></i>
                 </div>
             </div>
             <span>$9.99</span>
@@ -386,27 +380,25 @@
                 <img src="image\d.webp" alt="">
             </div>
             <div class="under_card">
-                <p>product Name</p>
+                <p>shirt</p>
                 <div class="like-button">
-                    <p><img src="image\heart.png" alt="">
-                    </p>
+                    <i class="far fa-heart"></i>
                 </div>
             </div>
-            <span>$9.99</span>
+            <span>$19.99</span>
         </div>
         <div class="card">
             <div id="im">
                 <img src="image\3.webp" alt="">
             </div>
             <div class="under_card">
-                <p>product Name</p>
+                <p>stuff</p>
                 <div class="like-button">
-                    <p><img src="image\heart.png" alt="">
-                    </p>
+                    <i class="fas fa-heart"></i>
                 </div>
             </div>
-            <span>$9.99</span>
-        </div>
+            <span>$99.99</span>
+        </div> -->
 
 
 
@@ -484,34 +476,197 @@
 
         function updateUI() {
             document.querySelector('.images img').src = imageSources[imgIndex]
+        };
+
+        let rightbtn = document.querySelector('.right-btn');
+        rightbtn.addEventListener('click', moveRight);
+
+        let leftbtn = document.querySelector('.left-btn');
+        leftbtn.addEventListener('click', moveLeft);
+
+
+        const hearts = document.querySelectorAll('.like-button');
+        console.log(hearts);
+        // eli (htmlElemnt) fiyi sameya metel ma badi
+        function addEventHandeler(htmlElement) {
+            htmlElement.addEventListener('click', function () {
+                htmlElement.classList.toggle('red')
+            })
+        };
+        hearts.forEach(addEventHandeler);
+
+
+        // managing search 
+        // let searchIcon = document.querySelector('.fa-search') 
+        // searchIcon.addEventListener('click',function(){
+        // storeSearch.classList.remove('hidden')
+        // })
+
+        // let storeSearch = document.querySelector{'#store-search-close'}
+        // let closeSearchIncom =document.querySelector('#store')
+
+        let storeSearch = document.querySelector('#store-search');
+        // get search icon
+        let searchIcon = document.querySelector('.fa-search');
+        function showSearch() {
+            storeSearch.classList.remove('hidden');
         }
+        searchIcon.addEventListener('click', showSearch);
 
-        let rightbtn = document.querySelector('.right-btn')
-        rightbtn.addEventListener('click', moveRight)
-
-        let leftbtn = document.querySelector('.left-btn')
-        leftbtn.addEventListener('click', moveLeft)
-
-
-
-
-
-        function changeColor(like-button) {
-            element.classList.toggle('clicked'); // Toggle the 'clicked' class
+        let closeSearchIcon = document.querySelector('#store-search-close');
+        function hideSearch() {
+            storeSearch.classList.add('hidden');
         }
+        closeSearchIcon.addEventListener('click', hideSearch);
+
+
+        function filterStoreItems() {
+            let searchValue = searchInput.value;
+            let maxPrice = priceLimitElement.value;
+            if (isNaN(maxPrice)) {
+                maxPrice = 0;
+            }
+
+            // loop over all cards
+            cards.forEach(function (element) {
+                const cardInnerText = element.innerText;
+                const cardInnerTextParts = cardInnerText.split('$');
+                const cardPrice = cardInnerTextParts[1];
+                // above is equivalent to const cardPrice = element.innerText.split('$')[1]
+
+                // either add or remove class hidden
+                // if card text content matches search value, remove class hidden
+                // hide the ones that are not matching search
+                // & show the matching ones
+                if (element.innerText.toLowerCase().includes(searchValue.toLowerCase()) && (0 == maxPrice || cardPrice < maxPrice)) {
+                    console.log('entered block to show card', cardPrice, maxPrice);
+                    element.classList.remove('hidden');
+                } else {
+                    element.classList.add('hidden');
+                }
+            });
+        }
+        // const cards = document.querySelectorAll('.cards-grids');
+        // store search filtering
+        let searchInput = document.querySelector('#store-search input[type=text]');
+        searchInput.addEventListener('input', filterStoreItems);
+        // get reference of the price limit input
+        const priceLimitElement = document.querySelector('#price-limit');
+        priceLimitElement.addEventListener('change', filterStoreItems);
+
+
+
+        // Array of card data
+        let cards = [
+            { img: "image/z.jpg", name: "phone", price: "199.99" },
+            { img: "image/r.jpg", name: "t-shirt", price: "29.99" },
+            { img: "image/k.jpg", name: "car", price: "999.99" },
+            { img: "image/he.jpg", name: "pen", price: "9.99" },
+            { img: "image/d.webp", name: "shirt", price: "19.99" },
+            { img: "image/3.webp", name: "stuff", price: "99.99" }
+        ];
+
+    function createHTMLProductCard(product) {
+        return `
+            <div class="card w-52 shadow-md">
+                <div class="img-wrapper border h-52 w-52 overflow-hidden">
+                    <img class="h-full max-w-none" src="${product.img}" alt="" />
+                </div>
+                <div class="card-details p-2">
+                    <div class="flex justify-between items-center">
+                        <h3 class="product-name">${product.name}</h3>
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="price">$${product.price}</div>
+                </div>
+            </div>
+        `;
+    }
+    
+    // Function to populate the cards grid with an array of card objects
+    function populateCardsGrid(cardsArray) {
+        let cardsGrid = document.querySelector('.cards-grid');
+        cardsGrid.innerHTML = ''; // Clear existing content
+    
+        cardsArray.forEach(function (card) {
+            let cardHTML = createHTMLProductCard(card);
+            cardsGrid.innerHTML += cardHTML;
+        });
+    }
+    
+    // Call the function to populate the cards grid with the array of cards
+    populateCardsGrid(cards);
+        // function createCard(title, content) {
+        //     const card = document.getElementById('card');
+        //     card.classList.add('card');
+        //     card.innerHTML = `<h3>${title}</h3><p>${content}</p>`;
+        //     return card;
+        // }
+
+        // // Function to render cards in the grid
+        // function renderCards() {
+        //     const cardGrid = document.querySelector('.cards-Grid');
+
+        //     cardData.forEach((cardInfo) => {
+        //         const card = createCard(cardInfo.imgSrc, cardInfo.title, cardInfo.content);
+        //         cardGrid.appendChild(card);
+        //     });
+        // }
+
+        // Call the renderCards function when the page loads
 
 
 
 
 
 
+        // Function to create a card element
+        // function createCard(data) {
+        //     const card = document.createElement("div");
+        //     card.className = "card";
 
+        //     const imageContainer = document.createElement("div");
+        //     imageContainer.id = "im";
+        //     const image = document.createElement("img");
+        //     image.src = data.imgSrc;
+        //     image.alt = data.title;
+        //     imageContainer.appendChild(image);
 
+        //     const underCard = document.createElement("div");
+        //     underCard.className = "under_card";
 
+        //     const title = document.createElement("p");
+        //     title.textContent = data.title;
 
+        //     const likeButton = document.createElement("div");
+        //     likeButton.className = "like-button";
+        //     likeButton.innerHTML = '<i class="far fa-heart"></i>';
 
+        //     underCard.appendChild(title);
+        //     underCard.appendChild(likeButton);
 
+        //     const price = document.createElement("span");
+        //     price.textContent = data.price;
 
+        //     card.appendChild(imageContainer);
+        //     card.appendChild(underCard);
+        //     card.appendChild(price);
+
+        //     return card;
+        // }
+
+        // // Function to add cards to the container
+        // function addCardsToContainer(containerId, cardDataArray) {
+        //     const container = document.getElementById(containerId);
+
+        //     cardDataArray.forEach(function (data) {
+        //         const card = createCard(data);
+        //         container.appendChild(card);
+        //     });
+        // }
+
+        // // Call the function to add cards to the container
+        // addCardsToContainer("cards-container", cardData);
 
         // const image = document.querySelector('.aa');
         // let currentimage = img.src = "images\orlf.webp"
@@ -543,18 +698,17 @@
         // }
         // updateUI();
 
+
+
+
+
+
+
+
+
+
+
     </script>
-
-</html>
-
-
-
-
-
-
-
-
-</script>
 </body>
 
 </html>

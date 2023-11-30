@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="cards-grid  flex flex-wrap justify-center items-center gap-5"></div>
+    
+    
+    
+    
+    
+    
+    <script>
+
+
+let cards = [
+            { img: "image/z.jpg", name: "phone", price: "199.99" },
+            { img: "image/r.jpg", name: "t-shirt", price: "29.99" },
+            { img: "image/k.jpg", name: "car", price: "999.99" },
+            { img: "image/he.jpg", name: "pen", price: "9.99" },
+            { img: "image/d.webp", name: "shirt", price: "19.99" },
+            { img: "image/3.webp", name: "stuff", price: "99.99" }
+        ];
+
+    function createHTMLProductCard(product) {
+        return `
+            <div class="card w-52 shadow-md">
+                <div class="img-wrapper border h-52 w-52 overflow-hidden">
+                    <img class="h-full max-w-none" src="${product.img}" alt="" />
+                </div>
+                <div class="card-details p-2">
+                    <div class="flex justify-between items-center">
+                        <h3 class="product-name">${product.name}</h3>
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="price">$${product.price}</div>
+                </div>
+            </div>
+        `;
+    }
+    
+    // Function to populate the cards grid with an array of card objects
+    function populateCardsGrid(cardsArray) {
+        let cardsGrid = document.querySelector('.cards-grid');
+        cardsGrid.innerHTML = ''; // Clear existing content
+    
+        cardsArray.forEach(function (card) {
+            let cardHTML = createHTMLProductCard(card);
+            cardsGrid.innerHTML += cardHTML;
+        });
+    }
+    
+    // Call the function to populate the cards grid with the array of cards
+    populateCardsGrid(cards);
+    </script>
+</body>
+</html>

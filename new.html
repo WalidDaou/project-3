@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            // .define un array 
+            // . this array will contain numbeer from 0- 10
+            let numArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+            // .wait 2 seconds 
+            setTimeout(function () {
+                // numArray.sort().reverse()
+                //  ma deyman btozbat 2eza fi 2 didgit
+                // or 
+                let stuff = numArray.sort((a, b) => {
+                    return a - b
+                }).reverse();
+                console.log(stuff)
+
+                // (function(a,b){
+                //      return a - b}).reverse();
+                //      console.log(stuff) ----> hay hiyi zeta el faw bi mo5tasar 
+                let onlyOdd = numArray.filter(function (number) {
+                    if (number % 2 == 0) {
+                        return false
+                    }
+                    else {
+                        return true
+                    }
+
+
+                })
+                console.log(onlyOdd)
+
+
+                let onlyEven = numArray.filter(function (number) {
+                    if (number % 2 == 0) {
+                        return true
+                    }
+                    else {
+                        return false
+                    }
+                })
+                console.log(onlyEven)
+
+            }, 2000)
+
+        })
+        // DOMContentLoaded function lal load 
+
+        // let fnExampel = ()=>{}
+        // function fnExampel(){
+
+        // } haw metel ba3don mou5tasar
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
